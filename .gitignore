@@ -1,1 +1,10 @@
+# Ignore virtual environment directory
 .venv/
+
+# Ignore Python bytecode files
+*.pyc
+__pycache__/
+
+# Ignore other common files
+.DS_Store
+*.egg-info/
