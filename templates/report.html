@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='Logo/Logoicon.png') }}" type="image/x-icon">
+    
+    <style>
+        body {
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container img {
+            max-width:40vw;
+            display:block;
+            margin: 30px auto;
+            border: 2px solid black;
+        }
+        h1 {
+            text-align: center;
+            color: #2C3E50;
+        }
+        h2 {
+            color: #2980B9;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.8vw;
+        }
+        .tech {
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='Logo/Logo.png') }}" alt="SERA"></a></li>
+            <li><a href="{{ url_for('index') }}">Product</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('rpt')}}">Report</a></li>
+            <li><a href="{{ url_for('Sdet') }}">Student Details</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>CIFAR-10 Image Classification using TensorFlow</h1>
+        <h2>Accuracy Graph:</h3>
+        <img src="{{ url_for('static', filename='Feed/accuracy.png') }}" alt="Accuracy Graph" style=padding-right:20px>
+        <p>The1st graph shows the accuracy of both training and validation sets. It indicates steady improvement, though there is a gap between training and validation accuracies, suggesting potential overfitting.</p><br><br>
+        <h2>Loss Graph:</h3>
+        <img src="{{ url_for('static', filename='Feed/loss.png') }}" alt="Loss Graph">
+        <p>The 2nd graph depicts loss values for both the training and validation sets. The training loss decreases consistently, while the validation loss decreases at a slower rate, highlighting room for further model tuning or regularization techniques.</p>
+    </div>
+</body>
+</html>

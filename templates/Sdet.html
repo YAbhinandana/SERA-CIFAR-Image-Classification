@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" >
+    <link rel="icon" href="{{ url_for('static', filename='Logo/Logoicon.png') }}" type="image/x-icon">
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .student-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .student-card h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .student-details {
+            margin-bottom: 10px;
+            color: black;
+        }
+        .student-details strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='Logo/Logo.png') }}" alt="SERA"></a></li>
+            <li><a href="{{ url_for('index') }}">Product</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('rpt')}}">Report</a></li>
+            <li><a href="{{ url_for('Sdet') }}">Student Details</a></li>
+
+    </nav>
+</div>
+
+<div class="container">
+    <div class="student-card">
+        <h2>Mentor</h2>
+        <div class="student-details"><strong>Guide Name:</strong> Mrs. P. Srilatha</div>
+        <div class="student-details"><strong>Designation:</strong> Assistant Professor Dept. of AI</div>
+    </div>
+
+    <div class="student-card">
+        <h2>Student 1</h2>
+        <div class="student-details"><strong>Student Name:</strong> Rohith Reddy</div>
+        <div class="student-details"><strong>Ht.No:</strong> 21eg106a10</div>
+        <div class="student-details"><strong>Class:</strong> AI-A</div>
+    </div>
+    
+    <div class="student-card">
+        <h2>Student 2</h2>
+        <div class="student-details"><strong>Student Name:</strong> T Krupa Varshini</div>
+        <div class="student-details"><strong>Ht.No:</strong> 21eg106a39</div>
+        <div class="student-details"><strong>Class:</strong> AI-A</div>
+    </div>
+
+    <div class="student-card">
+        <h2>Student 3</h2>
+        <div class="student-details"><strong>Student Name:</strong> Y Abhinandana</div>
+        <div class="student-details"><strong>Ht.No:</strong> 22eg506a05</div>
+        <div class="student-details"><strong>Class:</strong> AI-A</div>
+    </div>
+</div>
+
+</body>
+</html>

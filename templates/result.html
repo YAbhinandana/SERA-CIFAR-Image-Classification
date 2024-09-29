@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"></link>
+    <link rel="icon" href="{{ url_for('static', filename='Logo/Logoicon.png') }}" type="image/x-icon">
+
+    <style>
+        body {
+            
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='Logo/Logo.png') }}" alt="SERA"></a></li>
+            <li><a href="{{ url_for('index') }}">Product</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('rpt')}}">Report</a></li>
+            <li><a href="{{ url_for('Sdet')}}">Student Details</a></li>
+    </nav>
+    <div id="res">
+        <h1>Classification Result</h1>
+        <img src="{{ url_for('send_file', filename=filename) }}" alt="Uploaded Image">
+        <h2>Predicted Label: {{ label }}</h2>
+        <a id="hLink" href="{{ url_for('index') }}">Classify Another Image</a>
+    </div>
+</body>
+</html>
